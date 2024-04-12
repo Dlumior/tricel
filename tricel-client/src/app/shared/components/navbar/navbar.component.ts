@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { BaseLink } from '../../../link-shortener/interfaces/link.interface';
+import { LinkShortenerService } from '../../../link-shortener/services/link-shortener.service';
 
 @Component({
   selector: 'shared-navbar',
@@ -7,6 +8,8 @@ import { BaseLink } from '../../../link-shortener/interfaces/link.interface';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
+  constructor(private linkShortenerService: LinkShortenerService) {}
+
   @Output()
   public onNewLink: EventEmitter<BaseLink> = new EventEmitter();
 
@@ -15,6 +18,10 @@ export class NavbarComponent {
     url: '',
     short_url: '',
   };
+
+  public addLink(): void {
+    this.linkShortenerService.addLink(this.link);
+  }
 
   public emitLink(): void {
     if (this.link.url.length === 0) return;

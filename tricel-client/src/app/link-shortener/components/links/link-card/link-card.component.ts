@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-link-card',
+  selector: 'link-shortener-link-card',
   templateUrl: './link-card.component.html',
   styleUrl: './link-card.component.css',
 })

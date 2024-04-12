@@ -1,7 +1,9 @@
-<section class="links">
-  @for (link of links; track link.id) {
-  <li>{{ link.name }}</li>
-  } @empty {
-  <li>There are no items.</li>
-  }
-</section>
+@for (link of links; track link.id) {
+<link-shortener-link-card
+  class="link-card"
+  [name]="link.name"
+  [url]="link.url"
+/>
+} @empty {
+<li>There are no items.</li>
+}
