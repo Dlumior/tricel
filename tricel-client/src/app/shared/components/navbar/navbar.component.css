@@ -1,0 +1,48 @@
+.navbar {
+  width: 100vw;
+  padding-block: var(--size-2);
+  padding-inline: var(--size-4);
+  background-color: var(--camo-2);
+  color: var(--gray-10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input {
+  width: var(--size-content-2);
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-2);
+  color: var(--text-1);
+  background-color: #171a1c;
+}
+
+.input div {
+  border-radius: var(--radius-2);
+  font-size: var(--font-size-2);
+  padding-inline: var(--size-2);
+  padding-block: var(--size-1);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-3);
+}
+
+.search input {
+  width: 100%;
+  text-align: center;
+}
+
+button {
+  background-color: var(--camo-1);
+  color: var(--gray-10);
+}
+
+.information {
+  display: flex;
+  gap: var(--size-2);
+}

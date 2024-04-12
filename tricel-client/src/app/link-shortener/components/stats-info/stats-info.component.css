@@ -1,0 +1,33 @@
+.stats {
+  width: 100%;
+  padding-block: var(--size-8);
+  padding-inline: var(--size-4);
+}
+
+.rates {
+  padding-block: var(--size-2);
+  display: flex;
+  gap: var(--size-3);
+  justify-content: space-between;
+}
+
+.rate-item {
+  padding-block: var(--size-3);
+  padding-inline: var(--size-9);
+  border-radius: var(--radius-2);
+  border: var(--border-size-1) solid var(--camo-2);
+  background-color: var(--camo-2);
+  color: var(--gray-10);
+  display: flex;
+  gap: var(--size-1);
+  flex-direction: column;
+  align-items: center;
+}
+
+.rate-item:hover {
+  animation: var(--animation-scale-up) forwards;
+}
+
+hr {
+  margin-block: var(--size-fluid-2);
+}

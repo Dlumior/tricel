@@ -1,0 +1,15 @@
+.link-card {
+  padding-block: var(--size-4);
+  padding-inline: var(--size-9);
+  border-radius: var(--radius-2);
+  border: var(--border-size-1) solid var(--gray-8);
+  background-color: var(--surface-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-actions {
+  display: flex;
+  gap: var(--size-4);
+}

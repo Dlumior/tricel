@@ -1,0 +1,5 @@
+.links {
+  width: 100%;
+  padding-block-end: var(--size-8);
+  padding-inline: var(--size-4);
+}
