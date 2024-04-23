@@ -11,3 +11,10 @@ export type Link = BaseLink & {
   lifetime: Date;
   visibility: string;
 };
+
+export interface LinkRootObject {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: Link[];
+}

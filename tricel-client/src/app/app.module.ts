@@ -6,10 +6,17 @@ import { SharedModule } from './shared/shared.module';
 import { LinkShortenerModule } from './link-shortener/link-shortener.module';
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, LinkShortenerModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    LinkShortenerModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
