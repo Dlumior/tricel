@@ -5,6 +5,9 @@ import { LinkListComponent } from './components/links/link-list/link-list.compon
 import { StatsInfoComponent } from './components/stats-info/stats-info.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SharedModule } from '../shared/shared.module';
+import { LinkShortenerRoutingModule } from './link-shortener-routing.module';
+import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
+import { ConfigurationPageComponent } from './pages/configuration-page/configuration-page.component';
 
 @NgModule({
   declarations: [
@@ -12,8 +15,10 @@ import { SharedModule } from '../shared/shared.module';
     LinkListComponent,
     StatsInfoComponent,
     HomePageComponent,
+    ConfigurationPageComponent,
+    DashboardLayoutComponent,
   ],
-  exports: [HomePageComponent],
-  imports: [CommonModule, SharedModule],
+  exports: [],
+  imports: [CommonModule, SharedModule, LinkShortenerRoutingModule],
 })
 export class LinkShortenerModule {}
