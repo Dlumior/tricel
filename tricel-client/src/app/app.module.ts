@@ -7,6 +7,7 @@ import { LinkShortenerModule } from './link-shortener/link-shortener.module';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     LinkShortenerModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync('noop')
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
