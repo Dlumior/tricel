@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { BaseLink, Link, LinkRootObject } from '../interfaces/link.interface';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LinkShortenerService {
-  private BASE_API = 'http://localhost:8000';
+  private BASE_URL = environment.TRICEL_BACKEND_BASE_URL;
   private BASE_PATH = 'link-shortener/api/v1';
   private SPECIFIC_PATH = 'links/';
   public links: Link[] = [];
@@ -25,7 +26,7 @@ export class LinkShortenerService {
 
     this.http
       .get<LinkRootObject>(
-        `${this.BASE_API}/${this.BASE_PATH}/${this.SPECIFIC_PATH}`,
+        `${this.BASE_URL}/${this.BASE_PATH}/${this.SPECIFIC_PATH}`,
         options
       )
       .subscribe((resp) => {
