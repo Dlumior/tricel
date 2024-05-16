@@ -37,11 +37,6 @@
   text-align: center;
 }
 
-button {
-  background-color: var(--camo-1);
-  color: var(--gray-10);
-}
-
 .information {
   display: flex;
   gap: var(--size-2);
