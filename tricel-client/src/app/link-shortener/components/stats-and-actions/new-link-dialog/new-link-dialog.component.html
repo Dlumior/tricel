@@ -1,1 +1,23 @@
-<p>new-link-dialog works!</p>
+<h5>New link</h5>
+<form>
+  <div class="input_item">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" />
+  </div>
+  <div class="input_item">
+    <label for="link">Link</label>
+    <input type="text" name="link" id="link" />
+  </div>
+  <div class="input_item">
+    <label for="lifetime">Expiration day</label>
+    <input type="date" name="lifetime" id="lifetime" />
+  </div>
+  <div class="input_item">
+    <label for="visibility">Visibility</label>
+    <select name="visibility" id="visibility">
+      <option value="Private">Private</option>
+      <option value="Public">Public</option>
+    </select>
+  </div>
+</form>
+<button (click)="dialogRef.close()">Cancel</button>
